@@ -2629,7 +2629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20b57044a694bc439960c182261d831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 2113696922}
+  particles: {fileID: 2113696922}
 --- !u!82 &1657787133
 AudioSource:
   m_ObjectHideFlags: 0
