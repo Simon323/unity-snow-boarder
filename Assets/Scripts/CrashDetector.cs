@@ -13,6 +13,7 @@ public class CrashDetector : MonoBehaviour
     {
         if (other.tag == "Ground")
         {
+            FindObjectOfType<PlayerController>().DisableControls();
             Debug.Log("Gleba");
             crashEffect.Play();
             GetComponent<AudioSource>().PlayOneShot(crashSFX);
