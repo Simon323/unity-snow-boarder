@@ -9,10 +9,13 @@ public class CrashDetector : MonoBehaviour
     [SerializeField] ParticleSystem crashEffect;
     [SerializeField] AudioClip crashSFX;
 
+    bool hasCrash = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ground")
+        if (other.tag == "Ground" && !hasCrash)
         {
+            hasCrash = true;
             FindObjectOfType<PlayerController>().DisableControls();
             Debug.Log("Gleba");
             crashEffect.Play();
